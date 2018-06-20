@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
+  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body class="body_bg">
+  <div class="container mt_150">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4>后台管理系统</h4>
+        </div>
+        <div class="panel-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="username" class="col-sm-3 control-label">用户名</label>
+              <div class="col-sm-9">
+                <input type="text" autocomplete="off" class="form-control" id="username" placeholder="请输入用户名" name="username">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-sm-3 control-label">密码</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-3 col-sm-9">
+                <button type="reset" class="btn btn-default">重置</button>
+                <button type="submit" class="btn btn-default col-sm-offset-2 btn-primary">登录</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
+  <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+  <script src="lib/nprogress/nprogress.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    $(function () {
+      $(".form-horizontal").bootstrapValidator({
+        feedbackIcons: {
+          //校验成功的图标
+          valid: 'glyphicon glyphicon-hand-up',
+          invalid: 'glyphicon glyphicon-hand-down',
+          validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+          username: {
+            validators: {
+              notEmpty: {
+                message: '用户名不能为空'
+              },
+              callback: {
+                message: "用户名不存在"
+              }
+            }
+          },
+          password: {
+            validators: {
+              notEmpty: {
+                message: '密码不能为空'
+              },
+              stringLength: {
+                min: 6,
+                max: 20,
+                message: '用户名长度必须在6到20之间'
+              },
+              callback: {
+                message: "密码错误"
+              }
+            }
+          }
+        }
+      })
+      $("[type=reset]").on("click", function () {
+        $(".form-horizontal").data("bootstrapValidator").resetForm();
+      })
+      $(".form-horizontal").on('success.form.bv', function (e) {
+        e.preventDefault();
+        $.ajax({
+          type: "post",
+          url: "/employee/employeeLogin",
+          data: $(".form-horizontal").serialize(),
+          success: function (r) {
+            // console.log(r);
+            if (r.success === true) {
+              location.href = "index.html";
+            }
+            if (r.error === 1000) {
+              $(".form-horizontal").data("bootstrapValidator").updateStatus("username", "INVALID", "callback");
+            }
+            if (r.error === 1001) {
+              $(".form-horizontal").data("bootstrapValidator").updateStatus("password", "INVALID", "callback");
+            }
+          }
+        })
+      });
+    })
+  </script>
+
+</body>
+
+</html>

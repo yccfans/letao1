@@ -1,0 +1,84 @@
+h4 {
+  text-align: center;
+}
+.mt_150 {
+  margin-top: 150px;
+}
+.mt_50 {
+  margin-top: 30px;
+}
+.body_bg {
+  background-color: #222d32;
+}
+html,body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*lv ha*/
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #222d32;
+}
+.tit {
+  height: 50px;
+  width: 100%;
+}
+.tit a {
+  background-color: #367fa9;
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 24px;
+}
+.footer .manager p {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+.footer .manager img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 40px;
+}
+.footer .navs li li{
+  padding-left: 18px;
+  display: none;
+}
+.footer .navs a {
+  height: 40px;
+  display: block;
+  color: #fff;
+  text-align: center;
+  border-left: 3px solid transparent;
+  line-height: 40px;
+}
+.footer .navs a.now {
+  border-color: #069;
+  background-color: #1d1f21;
+}
+.main {
+  height: 100%;
+  margin-left: 200px;
+  background-color: skyblue;
+}
