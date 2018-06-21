@@ -1,0 +1,44 @@
+.tags {
+  position: relative;
+  width: 90px;
+  height: 100%;
+  float: left;
+}
+.tags li {
+  width: 90px;
+  height: 50px;
+}
+.tags li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-right: 1px solid #666;
+  border-bottom: 1px solid #666;
+  text-align: center;
+  line-height: 50px;
+}
+.tags li.cur a {
+  background-color: #ddd;
+}
+.brands {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.brands li {
+  float: left;
+  width: 33.33%;
+}
+.brands li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.brands li a img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,46 @@
+@import "variable.less";
+
+.tags {
+  position: relative;
+  width: 90px;
+  height: 100%;
+  float: left;
+  li {
+    width: 90px;
+    height: 50px;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      border-right: 1px solid #666;
+      border-bottom: 1px solid #666;
+      text-align: center;
+      line-height: 50px;
+    }
+  }
+  li.cur a {
+    background-color:#ddd;
+  }
+}
+.brands {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  li {
+    float: left;
+    width: 33.33%;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      img {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
