@@ -1,0 +1,16 @@
+.navs {
+  padding: 10px;
+}
+.navs li {
+  width: 33.33%;
+  float: left;
+}
+.navs li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.navs li a img {
+  display: block;
+  width: 100%;
+}
