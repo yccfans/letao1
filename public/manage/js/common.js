@@ -11,12 +11,12 @@ $(document).ajaxStart(function () {
   NProgress.start();
 });
 
-// $(document).ajaxStop(function () {
-//   //完成进度条
-//   setTimeout(function () {
-//     NProgress.done();
-//   }, 500);
-// });
+$(document).ajaxStop(function () {
+  //完成进度条
+  setTimeout(function () {
+    NProgress.done();
+  }, 500);
+});
 
 
 //非登陆页面，判断当前用户是否是登录了，如果登录了，就继续，如果没登陆，需要跳转到登录页面。
