@@ -34,10 +34,10 @@
             <li class="mui-pull-left">上架时间
               <span class="fa fa-angle-down"></span>
             </li>
-            <li class="mui-pull-left">价格
+            <li data-type="price" class="mui-pull-left">价格
               <span class="fa fa-angle-down"></span>
             </li>
-            <li class="mui-pull-left">库存
+            <li data-type="num" class="mui-pull-left">库存
               <span class="fa fa-angle-down"></span>
             </li>
             <li class="mui-pull-left">折扣
@@ -46,17 +46,8 @@
           </div>
           <div class="goods">
             <ul class="mui-clearfix">
-              <li>
-                <a href="#">
-                  <img src="images/product.jpg" alt="">
-                  <p class="mui-ellipsis-2">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                  <div>
-                    <span>&yen;560</span>
-                    <span>&yen;998</span>
-                  </div>
-                  <button class="mui-btn mui-btn-primary">立即购买</button>
-                </a>
-              </li>
+              <!-- 模板引擎 -->
+              <div class="loading"></div>
             </ul>
           </div>
         </div>
@@ -91,6 +82,21 @@
       </ul>
     </div>
   </div>
+  <script type="text/html" id="tdd">
+    {{each data v i}}
+    <li>
+      <a href="#">
+        <img src="{{v.pic[0].picAddr}}" alt="">
+        <p class="mui-ellipsis-2">{{v.proName}}</p>
+        <div>
+          <span>&yen;{{v.price}}</span>
+          <span>&yen;{{v.oldPrice}}</span>
+        </div>
+        <button class="mui-btn mui-btn-primary">立即购买</button>
+      </a>
+    </li>     
+    {{/each}} 
+    </script>
   <script src="lib/zepto/zepto.min.js"></script>
   <script src="lib/mui/js/mui.js"></script>
   <script src="lib/artTemplate/template-web.js"></script>

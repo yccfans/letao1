@@ -12,3 +12,24 @@
 .lt-sort li span {
   margin-left: 3px;
 }
+.lt-sort li.cur {
+  color: darkorange;
+}
+.goods p {
+  height: 40px;
+}
+.loading {
+  width: 150px;
+  height: 150px;
+  border: 5px solid #069;
+  margin: 150px auto;
+  animation: zhuan 1s infinite;
+}
+@keyframes zhuan {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
