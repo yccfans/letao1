@@ -5,6 +5,10 @@
   top: 0;
   left: 0;
   background-color: #333;
+  transition: all 1s;
+}
+.aside.cur {
+  display: none;
 }
 .aside .tit {
   width: 180px;
@@ -32,11 +36,14 @@
   text-align: center;
 }
 .aside .navs {
+  width: 100%;
   font-size: 15px;
 }
 .aside .navs li {
+  width: 180px;
   color: #fff;
   text-align: center;
+  line-height: 40px;
 }
 .aside .navs li p {
   height: 40px;
@@ -45,11 +52,30 @@
 .aside .navs li a {
   display: block;
   height: 40px;
+  border-left: 3px solid transparent;
 }
 .aside .navs li li {
-  padding-left: 14px;
+  text-indent: 14px;
 }
 .aside .navs a.cur {
   border-color: #069;
   background-color: #1d1f21;
+}
+.main {
+  padding-left: 180px;
+  transition: all 1s;
+}
+.main.cur {
+  padding-left: 0;
+}
+.main .top {
+  height: 50px;
+  background-color: skyblue;
+}
+.main .top a {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
 }

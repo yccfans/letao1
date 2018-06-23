@@ -19,3 +19,28 @@ $(".aside a").on('click', function () {
   })
   $(this).addClass("cur");
 })
+
+$(".slideT p").on("click", function () {
+  $(this).next().slideToggle();
+})
+
+$(".icon-menu").on("click", function () {
+  $(".aside").toggleClass("cur");
+  $(".main").toggleClass("cur");
+})
+
+$(".icon-logout").on("click", function () {
+  $(".modal-logout").modal("show");
+  $("")
+  $.ajax({
+    type: "get",
+    url: "/employee/employeeLogout",
+    success: function (r) {
+      if (r.success) {
+        
+        // location.href = "login.html";
+      }
+      // console.log(r);
+    }
+  })
+})

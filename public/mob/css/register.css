@@ -1,0 +1,17 @@
+.content {
+  padding: 10px;
+}
+.content [name="vCode"] {
+  width: 65%;
+}
+.content .btn_vcode {
+  width: 30%;
+  height: 40px;
+}
+.content .btn_register {
+  width: 100%;
+}
+.content .lastdiv {
+  margin-top: 10px;
+  font-size: 14px;
+}

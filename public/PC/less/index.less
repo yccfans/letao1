@@ -5,6 +5,10 @@
   top: 0;
   left: 0;
   background-color: #333;
+  transition: all 1s;
+  &.cur {
+    display: none;
+  }
   .tit {
     width: 180px;
     height: 50px;
@@ -33,10 +37,13 @@
     }
   }
   .navs {
+    width: 100%;
     font-size: 15px;
     li {
+      width: 180px;
       color: #fff;
       text-align: center;
+      line-height: 40px;
       p {
         height: 40px;
         margin: 0;
@@ -44,9 +51,10 @@
       a {
         display: block;
         height: 40px;
+        border-left: 3px solid transparent;
       }
       li {
-        padding-left: 14px;
+        text-indent: 14px;
       }
     }
     a.cur {
@@ -55,3 +63,24 @@
     }
   }
 }
+
+.main {
+  padding-left: 180px;
+  transition: all 1s;
+  &.cur {
+    padding-left: 0;
+  }
+  .top {
+    height: 50px;
+    background-color: skyblue;
+    a {
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+    }
+  }
+}
+
+
