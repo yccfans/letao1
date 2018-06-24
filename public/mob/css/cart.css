@@ -1,0 +1,69 @@
+mui-table-view-cell {
+  padding: 10px;
+  position: relative;
+}
+.lp {
+  float: left;
+  margin-right: 10px;
+}
+.lp img {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+.rp {
+  overflow: hidden;
+  color: #666;
+}
+.rp .tit {
+  height: 42px;
+  margin-bottom: 5px;
+}
+.rp .price {
+  color: red;
+}
+.rp .oldPrice {
+  color: #aaa;
+  text-decoration: line-through;
+}
+.rp .proprice {
+  margin-bottom: 3px;
+}
+.ck {
+  position: absolute;
+  bottom: -5px;
+  left: 5px;
+}
+.mui-table-cell {
+  display: block;
+}
+.container {
+  padding-bottom: 85px;
+}
+.totalPrice {
+  background-color: #ccc;
+  padding: 0 0 0 10px;
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 55px;
+}
+.totalPrice .pull-left {
+  color: red;
+  font-size: 12px;
+  line-height: 30px;
+}
+.lt_edit_size {
+  text-align: left;
+}
+.lt_edit_size span {
+  padding: 3px;
+  border: 1px solid #ccc;
+  line-height: 30px;
+}
+.lt_edit_size span.cur {
+  background-color: #069;
+}
+.lt_edit_num {
+  text-align: left;
+}

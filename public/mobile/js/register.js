@@ -70,7 +70,7 @@ $(function () {
       return false;
     }
 
-    if(!/^1[34578]\d{9}$/.test(mobile)){
+    if(!/^1[3-9]\d{9}$/.test(mobile)){
       mui.toast("手机号码格式不对");
       return false;
     }

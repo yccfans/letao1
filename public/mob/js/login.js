@@ -16,7 +16,12 @@ $("[type='button']").on("click", function () {
         mui.toast(r.message);
       }
       if (r.success) {
-        location.href = "user.html";
+        var k = location.search.replace("?retUrl=","");
+        if (k) {
+          location.href = k;
+        } else {
+          location.href = "user.html";
+        }
       }
     }
   })

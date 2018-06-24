@@ -2,7 +2,10 @@ $.ajax({
   type: "get",
   url: "/user/queryUserMessage",
   success: function (r) {
-    $(".content").html(template('tpl', r))
+    if (r.error) {
+      location.href = "login.html";
+    }
+    $(".content").html(template('tpl', r));
   }
 })
 
